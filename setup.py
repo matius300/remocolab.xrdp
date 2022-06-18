@@ -5,6 +5,6 @@ setup(
     version = "0.1",
     py_modules = ['remocolab'],
     url = "https://github.com/demotomohiro/remocolab",
-    author = "azazil",
+    author = "demotomohiro",
     install_requires = ["pyngrok"]
 )
