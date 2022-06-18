@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name = "azazil",
+    name = "remocolab.py",
     version = "0.1",
     py_modules = ['azazil'],
     url = "https://github.com/matius300/remocolab.xrdp",
