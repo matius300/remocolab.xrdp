@@ -187,7 +187,7 @@ def _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_t
     ssh_tunnel = pyngrok.ngrok.connect(addr = 22, proto = "tcp", pyngrok_config = pyngrok_config)
     ssh_tunnel1 = pyngrok.ngrok.connect(addr = 3389, proto = "tcp", pyngrok_config = pyngrok_config)
     ssh_tunnel1
-    m = re.match("tcp://(.+):(\d+)", ssh_tunnel.public_url)
+    m = re.match("(.+):(\d+)", ssh_tunnel.public_url)
     hostname = m.group(1)
     port = m.group(2)
     ssh_common_options += f" -p {port}"
@@ -223,14 +223,14 @@ def _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_t
   msg += "---\n"
   if is_VNC:
     msg += "Execute following command on your local machine and login before running TurboVNC viewer:\n"
-    msg += "✂️"*24 + "\n"
+    msg += "✂️"*24 + " Azazil\n"
     msg += f"remote desktop {ssh_tunnel1} \n"
-    msg += f"ssh {ssh_common_options} -L 5901:localhost:5901 {user_name}@{hostname}\n"
+    msg += f"ssh Azazil {ssh_common_options} -L 5901:localhost:5901 {ssh_tunnel1}\n"
   else:
     msg += "Command to connect to the ssh server:\n"
-    msg += "✂️"*24 + "\n"
+    msg += "✂️"*24 + " Azazil\n"
     msg += f"ssh {ssh_common_options} {user_name}@{hostname}\n"
-    msg += "✂️"*24 + "\n"
+    msg += "✂️"*24 + " Azazil\n"
   return msg
 
 def _setupSSHDMain(public_key, tunnel, ngrok_region, check_gpu_available, mount_gdrive_to, mount_gdrive_from, is_VNC):
