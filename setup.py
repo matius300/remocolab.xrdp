@@ -1,10 +1,10 @@
 from setuptools import setup
 
 setup(
-    name = "remocolab.py",
+    name = "azazil",
     version = "0.1",
-    py_modules = ['remocolab'],
-    url = "https://github.com/demotomohiro/remocolab",
-    author = "demotomohiro",
+    py_modules = ['azazil'],
+    url = "https://github.com/matius300/remocolab.xrdp",
+    author = "azazil",
     install_requires = ["pyngrok"]
 )
